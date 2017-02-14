@@ -65,3 +65,6 @@ y+= step_size * y_gradient
 out_new = forwardMultiplyGate(x,y);
 
 print out,out_new
+
+
+#CART,LDA,SVM,KNN,RF
