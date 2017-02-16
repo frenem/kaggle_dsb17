@@ -102,11 +102,11 @@ class SVM:
         self.b.value += self.step_size * self.b.grad
         self.c.value += self.step_size * self.c.grad
         
-        print ' ******** ********** **********'  
-        print 'New Value of a : {} '.format(self.a.value) 
-        print 'New Value of b : {} '.format(self.b.value) 
-        print 'New Value of c : {} '.format(self.c.value) 
-        print ' ******** ********** **********'  
+        print(' ******** ********** **********')  
+        print('New Value of a : {} '.format(self.a.value)) 
+        print('New Value of b : {} '.format(self.b.value)) 
+        print('New Value of c : {} '.format(self.c.value)) 
+        print(' ******** ********** **********')  
 
 data = [[1.2,0.7],[-0.3,0.5],[-3,-1],[0.1,1.0],[3.0,1.1],[2.1,-3]]
 labels  = [1,-1,1,-1,-1,1]
@@ -126,11 +126,11 @@ def evalTrainingAccuracy():
             num_correct += 1
            
     #return 'Number of correct guesses ' + str(num_correct)
-    print '***** Training Result *****' 
-    print '* Number of correct guesses : {}'.format(num_correct) 
-    print '* Percentage of correct guesses : {}%'.format(floor(num_correct*100.00/len(data)),3)
-    print '***** Training Result (END) *****' 
-    print ' ' 
+    print('***** Training Result *****') 
+    print('* Number of correct guesses : {}'.format(num_correct) )
+    print('* Percentage of correct guesses : {}%'.format(floor(num_correct*100.00/len(data)),3))
+    print('***** Training Result (END) *****') 
+    print(' ') 
 
 for iter in range(0,1000):
 
@@ -145,20 +145,20 @@ for iter in range(0,1000):
     
     if iter == 999 or iter == 0: 
     
-        print ' '
-        print ' Iteration Number : {}'.format(iter)  
-        print '***** Initial Values *****'
-        print 'a : {}'.format(svm.a.value)
-        print 'b : {}'.format(svm.b.value)
-        print 'c : {}'.format(svm.c.value)
-        print 'X : {}'.format(x.value)
-        print 'Y : {}'.format(y.value)
-        print 'label : {}'.format(label)
-        print '**************************'
-        print ' ' 
+        print(' ')
+        print(' Iteration Number : {}'.format(iter))
+        print('***** Initial Values *****')
+        print('a : {}'.format(svm.a.value))
+        print('b : {}'.format(svm.b.value))
+        print('c : {}'.format(svm.c.value))
+        print('X : {}'.format(x.value))
+        print('Y : {}'.format(y.value))
+        print('label : {}'.format(label))
+        print('**************************')
+        print(' ')
         
     svm.learnFrom(x,y,label)
     
     evalTrainingAccuracy()
 
-    
+   
